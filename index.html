@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+aside {
+    right: 2em;
+    position: fixed;
+    top: 2em;
+    width: 20%;
+    font-family: Arial;
+}
+aside li {color: black;cursor: pointer;}
+aside li:hover {color: gray;}
+
+aside li {margin-bottom:5px;list-style:none;}
+aside strong{text-transform: uppercase;display: block;margin-top:1em;margin-bottom:.5em;}
+
+article{width: 80%}
+article img {max-width: 100%;display:none}
+article img.active{display: block;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+
+  $( "ul li" ).click(function() {
+    // `this` is the DOM element that was clicked
+    var index = $( "ul li" ).index( this );
+    var index = index +1;
+
+    $( "article img.active" ).toggleClass("active");
+
+    $( "article img." + index ).toggleClass("active");
+
+
+  });
+
+
+});
+
+</script>
+
+</head>
+<header>
+
+</header>
+<body>
+
+  <article>
+<img class="1 active" src="1.jpg"/>
+<img class="2" src="2.jpg"/>
+<img class="3" src="3.jpg"/>
+
+<img class="4" src="4.jpg"/>
+<img class="5" src="5.jpg"/>
+<img class="6" src="6.jpg"/>
+
+<img class="7" src="7.jpg"/>
+<img class="8" src="8.jpg"/>
+<img class="9" src="9.jpg"/>
+<img class="10" src="10.jpg"/>
+
+
+</article>
+<aside>
+<ul>
+  <li>1. Landing</li>
+  <li>2. Map game</li>
+  <li>2.1 Map game interaction</li>
+  <li>2.2 Map game interaction</li>
+  <li>2.3 Map game results</li>
+
+
+  <li>3. Grid game</li>
+  <li>3.1 Grid game results</li>
+  <li>4. Authors game</li>
+  <li>5. Image game</li>
+  <li>6. Photographer's game</li>
+  <li>Results and recomendation</li>
+
+
+
+
+</aside>
+</body>
+</html>
